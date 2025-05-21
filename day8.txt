@@ -1,0 +1,268 @@
+﻿//void func(int no, string str) {
+//	print("亲爱的", no, "号：", str);
+//}
+//
+//void func1(int a, int b, int c, int* max, int* min) {
+//	*max = a > b ? a : b;
+//	*min = a < b ? a : b;
+//	*max = *max > c ? *max : c;
+//	*min = *min < c ? *min : c;
+//}
+int main() {
+
+	//地址：
+	//int a; 
+	//char b;//烫烫烫烫烫烫烫烫蘶魣<H   cout显示地址会将其识别为字符串
+	//bool c;
+	//string d;
+
+	//cout << "变量a的地址是：" << &a << endl;
+	//cout << "变量b的地址是：" << &b << endl;
+	//cout << "变量c的地址是：" << &c << endl;
+	//cout << "变量d的地址是：" << &d << endl;
+
+	////解决方法：1.强制转为(void*)   2.强制转为(int)  3.(long)....即整数型
+	//cout << "\n变量a的地址是：" << (void*)&a << endl;
+	//cout << "变量b的地址是：" << (void*)&b << endl;
+	//cout << "变量c的地址是：" << (void*)&c << endl;
+	//cout << "变量d的地址是：" << (void*)&d << endl;
+
+	//cout << "\n变量a的地址是：" << (int)&a << endl;
+	//cout << "变量b的地址是：" << (int)&b << endl;
+	//cout << "变量c的地址是：" << (int)&c << endl;
+	//cout << "变量d的地址是：" << (int)&d << endl;
+
+	//指针变量： 数据类型* 变量名  "指针"
+	//指针赋值： 指针=&变量名  "变量名"
+	/*int* pa; pa = &a;
+	char* pb = &b;
+	bool* pc = &c;
+	string*pd = &d;*///将地址赋值给指针pX
+
+	/*cout << "\n变量a的地址是：" << (long long)&a << endl;
+	cout << "变量b的地址是：" << (long long)&b << endl;
+	cout << "变量c的地址是：" << (long long)&c << endl;
+	cout << "变量d的地址是：" << (long long)&d << endl;*/
+
+	//int*    pa;
+	//char*   pb;
+	//bool*   pc;
+	//string* pd;  //变量在使用前要赋初试值
+
+	//a = 1;
+	/*cout << "\n变量a的地址是：" << (long long)pa << endl;
+	cout << "变量b的地址是：" << (long long)pb << endl;
+	cout << "变量c的地址是：" << (long long)pc << endl;
+	cout << "变量d的地址是：" << (long long)pd << endl;*///输出指针pX时，即输出指针指向X的地址
+
+	//强制转化指针类型：(数据类型*)变量    (int*)&a
+
+	//指针占用内存 64位os中，任何类型的指针都占用内存8Byte(字节)  bit(比特、位)
+
+	//指针是复合数据类型：
+
+	/*在C++中，指针是复合数据类型，复合数据类型是指基于其它类型而定义的数据类型，
+	在程序中，int是整型类型，int*是整型指针类型，int*可以用于声明变量，可以用于
+	sizeof运算符，可以用于数据类型的强制转换，总的来说，把int*当成一种数据类型
+	就是了。*/
+
+	/**运算符被称为间接值或解除引用（解引用）运算符，将它用于指针，可以得到该地址的
+	内存中存储的值，* 也是乘法符号，C++根据上下文来确定所指的是乘法还是解引用。*/
+
+	//int a = 3; int* p = &a; 
+	//cout << "a = " << a << "\n" << endl;
+	//cout << "*p = " << *p << "\n" << endl;//解引用 --> 得到指针p所指向的地址里存储的内容
+	//cout << "p = " << p << "\n" << endl;//指针本身仅指向（or存储）地址 --> 得到地址
+
+
+
+	//通俗来讲，你可以把这个过程想象成“快递地址”的传递：
+
+
+	//	####** 核心类比：传地址 = 告诉别人你的快递地址 * *
+	//	-**实参 * *：就像你自己的快递包裹，里面装着真实的数据（比如一个变量里的数字`5`）。
+	//	- **形参（指针） * *：相当于你告诉别人“我的包裹放在XX小区XX栋XX室”（这就是地址）。
+	//	- **解引用（`*`） * *：相当于别人根据你给的地址，直接找到你的包裹并修改里面的东西。
+
+
+	//	#### * *举个生活化的例子： * *
+	//	假设你有一个盒子（实参），里面装着苹果（值是`5`）。
+	//	- **传值调用（不修改原值） * *：
+	//	别人找你借苹果，你直接给对方一个一模一样的盒子（复制一份数据）。
+	//	对方在自己的盒子里把苹果换成橘子（修改形参），但你的盒子里还是苹果（实参不变）。
+
+	//	- **传地址调用（修改原值） * *：
+	//	别人找你借苹果，你告诉对方你的盒子放在哪里（传递地址）。
+	//	对方走到你的盒子旁边，直接把苹果换成橘子（通过地址修改实参）。
+	//	等你再看自己的盒子时，里面已经是橘子了（实参被修改）。
+
+
+	//	#### * *用代码场景翻译一下： * *
+	//	```cpp
+	//	// 传值调用（无法修改实参）
+	//	void change_value(int x) { // x是实参的“复制体”
+	//	x = 100; // 改的是复制体，原数据不变
+	//}
+
+	//// 传地址调用（可以修改实参）
+	//void change_address(int* x) { // x存放实参的地址（好比“快递地址”）
+	//	*x = 100; // 通过地址找到实参，直接修改它（好比按地址改包裹内容）
+	//}
+
+	//int main() {
+	//	int a = 5; // 实参：盒子里装着5
+	//	change_value(a); // 传值：给对方一个复制的盒子，a还是5
+	//	print(a); // 输出：5
+
+	//	change_address(&a); // 传地址：告诉对方盒子的地址（&a取地址）
+	//	print(a); // 输出：100（实参被修改了）
+	//	return 0;
+	//}
+	//```
+
+
+	//	####** 关键结论：**
+	//	-**传值 * *：给复印件，改复印件不影响原件。
+	//	- **传地址 * *：给原件的位置，直接改原件。
+	//	- **指针（`int*`） * *：专门用来存放地址的变量，就像“地址小本本”。
+	//	- **解引用（`*`） * *：通过地址找到对应的数据，就像“按地址打开盒子”。
+
+	//	这样理解的话，“传地址”的核心就是： * *让函数能直接操作调用者的数据，而不是操作一份复制的数据 * *。
+	
+	//int bh = 3; 
+	//string message = "我是一只小小鸟。";
+
+	//{
+	//	int bh = 3; 
+	//	string message = "我是一只小小鸟。";
+	//	//func(bh, message);
+	//	{
+	//		int *no = &bh;
+	//		string *str = &message;
+	//		cout << "亲爱的" << *no << "号：" << *str << endl;
+
+	//		*no = 8;
+	//		*str = "我有一只小小鸟。";//地址传递
+	//	}
+	//	cout << "亲爱的" << bh << "号：" << message << endl;
+
+	//	int a = 180, b = 170, c = 175, m, n;
+	//	func1(a, b, c, &m, &n);
+	//	print("m = ", m, ",n = ", n, "\n");
+}
+//void func(string varname, void *p) {
+//	print(varname, "的地址是", p)}
+int main() {
+
+	//const 修饰变量 --> 变成常量
+
+	/*
+	1.宏定义常量  #define 常量名 值;
+	2.const 数据类型 常量名 = 值;
+	3.常量不许修改
+	*/
+
+	//const 修饰指针
+
+	/*
+	1.常量指针：const 数据类型* 变量名; 可改变地址（指向的对象），不可通过解引用改变对象的值（存储地址的值）
+
+	2.指针常量：数据类型* const 变量名; -->" 引用 "
+	3.常指针常量： const 数据类型* const 变量名;
+	*/
+	/*int a = 3, b = 8;
+	const int* p = &a;
+	a = 13;
+	cout << "a = " << a << endl;
+	cout << "*p = " << *p << endl;
+	p = &b;
+	print("a = ", a, "\n","*p = ", *p);*/
+
+	/*
+			1）函数的返回值用void，表示函数没有返回值。
+		void func(int a,int b)
+		{
+			// 函数体代码。
+			return;
+		}
+		2）函数的参数填void，表示函数不需要参数（或者让参数列表空着）。
+		int func(void)
+		{
+			// 函数体代码。
+			return 0;
+		}
+		3）的形参用void *，表示接受任意数据类型的指针。
+			注意：
+					不能用void声明变量，它不能代表一个真实的变量，但是，用void*可以。
+					不能对void *指针直接解引用（需要转换成其它类型的指针）。
+					把其它类型的指针赋值给void*指针不需要转换。
+					把void *指针赋值给把其它类型的指针需要转换。
+
+				其他类型指针 → void*		不需要（隐式转换）		int* p = new int; void* vp = p;
+				void → 其他类型指针*		需要（显式转换）			void* vp = p; int* p2 = (int*)vp;
+				void 解引用前*			必须转换为具体类型指针	*((int*)vp) = 100;
+
+						#include <iostream>
+						using namespace std;
+
+						int main() {
+							// 示例1：int* → void*（隐式转换）
+							int num = 42;
+							int* int_ptr = &num;          // int类型指针
+							void* void_ptr = int_ptr;     // 直接赋值给void*，无需转换
+
+							cout << "int_ptr地址: " << int_ptr << endl;
+							cout << "void_ptr地址: " << void_ptr << endl; // 输出相同地址
+
+							// 示例2：自定义类型指针 → void*（隐式转换）
+							class MyClass { public: int value; };
+							MyClass obj;
+							MyClass* obj_ptr = &obj;
+							void_ptr = obj_ptr; // 类指针也可隐式转换为void*
+
+							return 0;
+						}
+
+						#include <iostream>
+						using namespace std;
+
+						int main() {
+							int num = 100;
+							void* void_ptr = &num; // void*指向int类型数据
+
+							// 错误示例：直接赋值给int*（C++编译错误）
+							// int* int_ptr = void_ptr;  // 报错：无法从void*转换为int*
+
+							// 正确示例：显式类型转换（C风格转换或static_cast）
+							int* int_ptr = static_cast<int*>(void_ptr); // C++推荐方式
+							// int* int_ptr = (int*)void_ptr;           // C风格转换，效果相同
+
+							*int_ptr = 200; // 通过转换后的指针修改原值
+							cout << "num = " << num << endl; // 输出：200
+
+							return 0;
+						}
+
+	
+	*/
+	/*print(sizeof(void*));
+
+	int a;
+	char b;
+
+	func("a", &a);
+	func("b", &b);*/
+
+	//库函数大多是void型,如：memset()把内存中的数据设置为某个值, memcpy()内存复制;
+	//memset();
+	//memcpy();
+
+	//double d = 3.14;
+	//int* p = (int*)&d;// 编译器不报错，但解引用*p会访问错误内存
+
+	////double d = 3.14;
+	////int* p = static_cast<int*>(&d); // 编译错误：无法从double*转换为int*
+
+	//print(d);
+	//print(p);
+}
