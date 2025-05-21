@@ -1,0 +1,158 @@
+//int a = 10;
+	//int c = 20;
+
+	//c += a;  //c = c+a;
+	//c -= a;  //c = c-a;
+	//c *= a;  //c = c*a;
+	//c /= a;  //c = c/a;
+	//c %= a;  //c = c/a;
+
+	//cout << "c=" << c << endl;
+
+	/*int a = 10;
+	int b = (20);
+	int c(30);
+
+	int d = 11;
+	int e = {12};
+	int f{13};
+
+	cout << "a=" << a << endl;
+	cout << "b=" << b << endl;
+	cout << "c=" << c << endl;
+	cout << "d=" << d << endl;
+	cout << "e=" << e << endl;
+	cout << "f=" << f << endl;*/
+	//Linux:  g++ -o file_name file_name.cpp -std=c++11   在Linux运行C++11标准时，要加入-std=c++11
+
+	//int a = 7; int b = 8; bool result;
+	////result = a >= b;
+	////cout << result << endl;
+	//cout << "result=" << (a == b) << endl; //关系表达式运算需要括号，算数运算可以不用括号；
+	////关系运算输出bool值；
+
+	/*string str1 = "西瓜";
+	string str2 = "西施";
+	cout <<(str1 != str2)<< endl;*/
+
+	//bool a = true;
+	//bool b = true;
+	//bool c = false;
+	//bool x;
+	//
+	////x = a || c;                 //&&逻辑或 ||逻辑与 !逻辑非
+	////cout << "x=" << x << endl;
+	//cout << "x=" << (b == !a) << endl; //逻辑运算输出时要使用括号；
+
+	/*int age = 23;
+	int hight = 168;
+	double weight = 48.8;
+	bool yz = true;
+	cout << "result=" << (age < 25 && hight >= 165 && weight < 50 && yz == 1) << endl;*/
+
+	/*int a = 1, b = 2;
+	cout << "a=" << a << endl;
+	cout << "b=" << b << endl;*/
+
+	//int a, b;
+	//b = a = 2, a * 2;
+	//b = (a = 2, a * 2); //逗号优先级最低
+
+	/*bool yz;
+	cout << "请输入颜值：（1-漂亮 0-不漂亮）";
+	cin >> yz;
+	if (yz) {
+		cout << "晋级！！！" << endl;
+
+	}
+	else {
+		cout << "晋级失败！！！" << endl;
+	}*/
+
+	/* char sex;
+		bool yz;
+		int sc;
+
+		cout << "请输入性别：（x-女 y-男）";
+		cin >> sex;
+
+		if (sex != 'x') return 0;
+
+		cout << "输入颜值：（1-漂亮 0-不漂亮）";
+		cin >> yz;
+
+		if (!yz) return 0;
+
+		cout << "输入身材：（1-火辣 2-丰满 3-苗条 ）";
+		cin >> sc;
+
+		if (sc == 1) {
+			cout << "晋级成功！！！" << endl;
+		}
+		else if (sc == 2) {
+			cout << "待定！" << endl;
+		}
+
+		return 0;*/
+
+		//三目运算
+	 /*   int a = 7, b = 9, c = 0, d;
+		d = (a > b ? a : b)>c?(a>b?a:b):c;
+		cout << "d=" << d << endl;*/
+
+
+		/*int a;
+		cout << "请输入等级（1 2 3 4）：" << endl;
+		cin >> a;
+
+		switch(a){
+		case 1: cout << "优秀" << endl; break;
+		case 2: cout << "良好" << endl; break;
+		case 3: cout << "及格" << endl; break;
+		case 4: cout << "不及格" << endl; break;
+		default:break;
+		}*/
+
+		/* char sex;
+			bool yz;
+			int sc;
+
+			cout << "请输入性别：（x-女 y-男）";
+			cin >> sex;
+
+			if (sex != 'x') return 0;
+
+			cout << "输入颜值：（1-漂亮 0-不漂亮）";
+			cin >> yz;
+
+			if (!yz) return 0;
+
+			cout << "输入身材：（1-火辣 2-丰满 3-苗条 ）";
+			cin >> sc;
+
+			if (sc == 1) {
+				cout << "晋级成功！！！" << endl;
+			}
+			else if (sc == 2) {
+				cout << "待定！" << endl;
+			}
+
+			return 0;*/
+
+			//三目运算
+		 /*   int a = 7, b = 9, c = 0, d;
+			d = (a > b ? a : b)>c?(a>b?a:b):c;
+			cout << "d=" << d << endl;*/
+
+
+			//int a;
+			//cout << "请输入等级（1 2 3 4）：" << endl;
+			//cin >> a;
+
+			//switch(a){
+			//case 1: cout << "优秀" << endl; break;
+			//case 2: cout << "良好" << endl; break;
+			//case 3: cout << "及格" << endl; break;
+			//case 4: cout << "不及格" << endl; break;
+			//default:break;
+			//}

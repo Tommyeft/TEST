@@ -1,0 +1,222 @@
+﻿	//sizeof求变量名或数据类型的长度      sizeof(变量名/数据类型)   sizeof 变量名
+	//cout << "sizeof(int)=" << sizeof(int) << endl;
+	//cout << "sizeof(float)=" << sizeof(float) << endl;
+	//cout << "sizeof(double)=" << sizeof(double) << endl;
+	//cout << "sizeof(char)=" << sizeof(char) << endl;
+	//cout << "sizeof(string)=" << sizeof(string) << endl;
+	//cout << "sizeof(bool)=" << sizeof(bool) << endl;
+	//cout << "sizeof(long)=" << sizeof(long) << endl;//长整数 32位：4  64位：8
+
+	//int i = 6;
+	//cout << "sizeof(i)=" << sizeof(i) << endl;
+	
+
+	/*cout << "sizeof(short)=" << sizeof(short) << endl;
+	cout << "sizeof(unsigned short)=" << sizeof(unsigned short) << endl;
+	cout << "sizeof(int)=" << sizeof(int) << endl;
+	cout << "sizeof(unsigned int)=" << sizeof(unsigned int) << endl;
+	cout << "sizeof(long)=" << sizeof(long) << endl;
+	cout << "sizeof(unsigned long)=" << sizeof(unsigned long) << endl;
+
+	unsigned short ii = 65536;
+	cout << "ii = " << ii << endl;
+	*/
+
+	//二进制：0b or 0B 开头
+	//int a = 0b101;// 换算成十进制为 5 
+	//int b = -0b110010;// 换算成十进制为 -50 
+	//int c = 0B100001;// 换算成十进制为 33
+
+	//八进制：书写时必须以0开头（注意是数字 0，不是字母 o）。 
+	//int a = 015;// 换算成十进制为 13 
+	//int b = -0101;// 换算成十进制为 -65 
+	//int c = 0177777;  // 换算成十进制为 65535
+
+	//十六进制：书写时必须以0x或0X（不区分大小写）开头。
+
+	//int a = 0X2A;// 换算成十进制为 42 
+	//int b = -0XA0;  // 换算成十进制为 -160 
+	//int c = 0xffff;// 换算成十进制为 65535 
+
+
+	//cout << "a = " << a << endl;
+	//cout << "b = " << b << endl;
+	//cout << "c = " << c << endl;
+
+	//C++11标准 long long 类型:
+
+	/*在VS中，long是4字节，32位。      -2147483648~2147483647 
+	
+	在Linux中，long是8字节，64位。   -9223372036854775808~9223372036854775807 
+
+	C++11标准增了long long类型的整数，至少64位，且至少与long一样长。 
+
+	在VS中，long long是8字节，64位。 -9223372036854775808~9223372036854775807 
+
+	在Linux中，long和long long类型都是8字节，64位。*/ 
+
+	/*long a = 2147483647; cout << "sizeof(a)=" << sizeof(a) << "\na=" << a << endl;
+	long b = 2147483747; cout << "sizeof(b)=" << sizeof(b) << "\nb=" << b << endl;*/
+
+	/*long long a = 9223372036854775807; cout << "sizeof(a)=" << sizeof(a) << "\na=" << a << endl;
+	long long b = 9223372036854775907; cout << "sizeof(b)=" << sizeof(b) << "\nb=" << b << endl;*/
+
+	//浮点数
+	/*cout << "sizeof(float)=" << sizeof(float) << endl;
+	cout << "sizeof(double)=" << sizeof(double) << endl;
+	cout << "sizeof(long double)=" << sizeof(long double) << endl;*/
+	//VS和Linux中，long double占用的内存空间分别是8和16字节。
+	//float 7位有效数  double 15~16有效数字
+	/*float a = 12345123.456789f; cout << "a=" << a << endl;
+	double b = 12345123456789.456789; cout << "b=" << b << endl;
+	long double c = 12345123456789.456789; cout << "c=" << c << endl;
+	printf("a = %lf\n", a);
+	printf("b = %lf\n", b);
+	printf("c = %lf\n", c);*/
+
+	//Char字符型 占用1字节 使用单引号''
+	/*char a = 'X';
+	cout << "a=" << a << endl;
+	cout << "a=" << (int)a << endl;//转换为整数int
+	cout << "sizeof(a)=" << sizeof(a) << endl;*/
+		
+		//ASCII表常用字符
+		//a）32是空格。
+		//b）48～57是0到9十个阿拉伯数字；
+		//c）65～90是26个大写英文字母；
+		//d）97～122号是26个小写英文字母；
+		//e）其余的是一些标点符号、运算符号等；
+		//f）第127个字符表示的是键盘上的删除键。
+		// 0 null， 10 换行， 13 回车
+
+		//字符的本质
+		//a）字符的本质是整数，取值范围是0～127。
+		//b）在书写的时候可以用单引号包含，也可以用整数。
+		//c）如果书写的时候用单引号包含，程序执行的时候，将把符号解释为对应的整数。
+		//d）显示的时候，把整数解释为对应的符号，也可以直接显示整数。
+		//d）可以与整数进行任何运算，运算的时候，书写方式可以用字符，也可以用整数。
+		//e）C++为什么没有提供1字节的整型？
+		//f）字符型也可以用unsigned修饰，意义何在？
+
+
+//转义字符：
+		
+		//在C++程序中，使用转义字符的原因有两个：
+		//⚫ 控制字符没有符号，无法书写，只能用其它的符号代替。
+		//⚫ 某些符号已被C++征用，语义冲突，只能用其它的符号代替。
+
+//0 \0 空，给字符型变量赋值时可以直接书写0。
+//10 \n 换行(LF) ，将当前位置移到下一行开头。
+//13 \r 回车(CR) ，将当前位置移到本行开头
+
+//9 \t 水平制表(HT) （跳到下一个TAB位置）
+//cout << "1.\t西斯" << endl;
+//cout << "002.\t西瓜" << endl;
+
+//92 \\ 斜线
+//char a = '\\';
+//cout << "a=" << a << endl;
+
+//34 \" 双引号，书写字符时不必转义。    1.char a = '"';    2.cout << "1111\"222222";
+
+//39 \' 单引号，书写字符串中不必转义。 1.char a = '\'';    2.cout << "1111'222222";  ps:刚好与双引号相反；
+//7 \a 警报
+//8 \b 退格(BS) ，将当前位置移到前一列
+//12 \f 换页(FF)，将当前位置移到下页开头
+//11 \v 垂直制表(VT)
+
+//C++11原始自变量
+//string path = "D:\\vs2022\\Dev\\CppSeries\\Project_test1";
+//string path1 = R"(D:\vs2022\Dev\CppSeries\Project_test1)";  //R"()"
+//cout << "path is:" << path << endl;
+//cout << "path1 is:" << path1 << endl;
+//
+////多行字符串用" \ "，作为连接：
+//string str = "  qwert<>qwert<>qwert<>\
+//			    asdfg<>asdfg<>asdfg<>\
+//			    zxcvb<>zxcvb<>zxcvb<>";
+//string str1 = R"(
+//				qwert<>qwert<>qwert<>
+//				asdfg<>asdfg<>asdfg<>
+//				zxcvb<>zxcvb<>zxcvb<>)";
+//cout << str << endl;
+//cout << str1 << endl;
+
+//字符串型：
+//string str = "西施";                  // 声明字符串变量并初始化。 
+//
+//str = "美女西施";                    // 对字符串变量重新赋值。 
+//
+//cout << "请输入超女姓名：";         // 输出提示文字内容。 
+//cin >> str;                                       // 从控制台输入数据，保存在变量str中。
+//
+//if (str == "冰冰")  cout << "我喜欢\n";           // 用==可以判断两个字符串是否相同。 
+//
+//if (str != "冰冰") cout << "我不玩了\n";          // 用!=可以判断两个字符串是否不相同。
+//
+//str = "姓名：" + str + "，这是我现女友。";     // 用+可以拼接多个字符串。 
+//
+//// 如果字符串的内容都是常量，不要写加号（+），如果内容很长，可以分成多行书写。 
+//str =	"超女姓名："
+//		"幂幂"
+//		"，这是我的前女友。";
+//
+//cout << str << endl;
+
+
+//布尔型的本质是unsighed char 即1+0=1；
+//bool b = 1;
+//
+//cout << "b+b=" << b + b << endl;       // 将显示2。 
+//// 如果对bool型变量赋非0的值，将转换成1。 
+//b = 30;
+//cout << "b=" << b << endl;// 将显示1。 
+//// 找到布尔变量b的内存，把里面的数据强制为8。 
+//char* c = (char*)&b;
+//*c = 8;
+//cout << "b=" << b << endl;
+//// 将显示8。 
+
+//char a = 30;
+//int
+//b = 102400;
+//long long c = 15000000000001;
+//// 如果一个表达式中出现了不同类型操作数的混合运算，较低类型将自动向较高类型转换。 
+//cout << "a+b+c=" << a + b + c << endl;
+//
+//// 当表达式中含有浮点型操作数时，所有操作数都将转换为浮点型。 
+//cout << "8/5=" << ((double)8) / 5 << endl;
+//
+//// 赋值运算的右值类型与左值类型不一致时，将右值类型提升/降低为左值类型。 
+//// 赋值运算右值超出了左值类型的表示范围，把该右值截断后赋给左值，所得结果可能毫无意义。
+//int d = (int)23.59;        // 降低了精度。 
+//cout << "d=" << d << endl;
+//
+//unsigned int e = (unsigned int)4294967295 + 10;       // 值被截断，从高位截断 
+//cout << "e=" << e << endl;
+//// 4294967295         11111111111111111111111111111111 
+//// 4294967296 000100000000000000000000000000000000 
+//// 4294967297 000100000000000000000000000000000001
+//
+//
+////强制类型转换的语法：(目标类型)表达式或目标类型(表达式) 
+//cout << "8/5=" << ((double)8) / 5 << endl;
+
+
+
+// 1）为名称复杂的类型创建别名，方便书写和记忆。 
+ // 2）创建与平台无关的数据类型，提高程序的兼容性。 
+ // 在VS中，short是两个字节，int是四个字节，long也是四个字节，long long是八个字节。 
+typedef short         int16_t;    // 16位的整数。 
+typedef int             int32_t;    // 32位的整数。 
+typedef long long int64_t;    // 64位的整数。 
+// 在Linux中，short是两个字节，int是四个字节，long也是八个字节，long long也是八个字节。
+typedef short         int16_t;    // 16位的整数。 
+typedef int             int32_t;    // 32位的整数。 
+typedef long          int64_t;    // 64位的整数。 
+
+// 在程序源代码中，只使用别名int16_t、int32_t、int64_t，不使用原名。
+
+//语法：typedef 原数据类型名 别名;
+//C++11还可以用using关键字创建数据类型的别名。
+//语法：using 别名 = 原数据类型名;

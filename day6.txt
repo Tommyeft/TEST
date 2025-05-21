@@ -1,0 +1,76 @@
+int max(int a, int b);
+
+void print(string str);
+
+ void printmt();
+
+int max(int a, int b) {
+	if (a > b) return a;
+	return a;
+}
+
+void print(string str) {
+	std::cout << str << std::endl;
+
+}
+
+int main() {
+	cout << "max(5, 8)=" << max(5, 8) << endl;
+	print("这是一个打印语句");
+	printmt();
+
+}
+
+int aa;
+void func1();
+void func2();
+
+int main() {
+	aa = 10;
+	func1();
+	func2();
+	cout << "main aa = " << aa++ << endl;
+}
+
+void func1(){ 
+	cout << "func1 aa = " << aa++ << endl; 
+}
+
+void func2() {
+	cout << "func2 aa = " << aa++ << endl;
+}
+
+void func(int no, string str);
+
+int main() {
+	int bh = 1;
+	string message = "qwert";
+	func(bh, message);
+	func(1, "111111");
+	cout << "qwert\n" << bh << "yuiop\n" << message << endl;
+}
+
+void func(int no, string str) {
+	no = 5; str = "asdfg";
+	cout << "asdfg" << no << "no" << str << endl;
+	return;
+}
+
+	cout << "max(5, 8)=" << max(5, 8) << endl;
+	cout << "min(5, 8)=" << min(5, 8) << endl;
+	print(1, "我是一只小小鸟");
+	print(2, "我是一只小小鸟");
+	print(3, "我是一只小小鸟");
+	print(4, "我是一只小小鸟");
+	print(5, "我是一只小小鸟");
+ 	print(6, "我是一只小小鸟");
+	print(7, "我是一只小小鸟");//F9设置断点   F10逐行调试断点（跳过内部函数）   
+	//F11进入函数内部（转跳，更细化的逐行调试）  shift+F5 终止   鼠标拖动箭头跳过代码
+	//局部变量窗口显示了变量的值，也可以修改。
+
+		int func(int x) {//递归函数
+		if (x == 0) return 0;//递归终止判断
+		return x + func(x - 1);//递归主体中调用自己
+	};
+	cout << "func(3)=" << func(3) << endl;
+}

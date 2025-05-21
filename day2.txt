@@ -1,0 +1,83 @@
+#include <iostream>
+using namespace std;
+//#define MONTHS 12
+//#define PI 3.1415926535
+//const int Day = 7;
+//std::cout << "Hello World!\n";
+//cout << "一年有：" << MONTHS << "个月" << endl;
+//cout << "圆周率是：" << PI << endl;
+//cout << "一个星期有：" << Day << endl;
+//int age = 13;
+//cout << "未修改前：" << age << endl;
+//age = 12;
+//cout << "修改后：" << age << endl;
+//
+////标识符命名只能用：字母、数字、下划线
+//int abc12_];
+////名称第一个字符不能是数字
+//int 123d;
+////区分大小写
+//int AA;
+//cout << aa << endl;
+////不能用关键字【保留字】做标识符
+//// asm do if return typedef
+//// auto double inline short typeid
+//// bool dynamic_cast int signed typename
+//// break else long sizeof union 
+//// case enum mutable static unsigned
+//// catch explicit namespace static_cast using
+////char export new struct virtual
+//// class extern operator switch void 
+//// const false private template voatile
+//// const_cast float protected this wchar_t
+//// continue for public throw while
+//// default friend register true
+//// delete goto reinterpret_cast try
+//
+////下划线和大写字母开头的标识符保留给编译器及其使用的资源使用；否则产生不确定性
+////cpp不限制标识符长度，但其他平台可能限制，小于64字符
+////标识符应‘见字知义’
+
+/* string name;
+ cout << "请输入名字：";
+ cin >> name;
+ cout << "已经输入名字：" << name << endl;
+
+ int age;
+ cout << "请输入年龄：";
+ cin >> age;
+ cout << "已经输入年龄：" << age << endl;
+
+ double weight;
+ cout << "请输入体重：";
+ cin >> weight;
+ cout << "已经输入体重：" << weight << endl;
+
+ char sex;
+ cout << "请输入性别（y-男，x-女）：";
+ cin >> sex;
+ cout << "已经输入性别：" << sex << endl;*/
+
+//bool val;
+//cout << "漂亮：1 or true，不漂亮：0 or false：";
+//cin >> val;
+//cout << "是否漂亮？" << val << endl;
+
+//整数运算除法时，如果分母为0，程序则异常退出；
+	//浮点运算除法时，如果分母为0.0 / 0，则得到inf（infinite 无限大）；
+	//两个整数除法运算时，将舍去小数部分，得到一个整数。
+	//整数与浮点数进行除法运算时，得到的结果是浮点数。
+	//取模运算只能用于整数，分母不为0；
+//int a = 8;
+//int b = 5;
+//
+//cout << a % b << endl;
+
+	//int i = 10;
+	//int a, b;
+	//i++;
+	//cout << "i = " << i << endl;
+	//a = ++i;
+	//cout << "a = " << a << endl;
+	//b = i;
+	//cout << "b = " << b << endl;

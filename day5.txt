@@ -1,0 +1,54 @@
+/*int no = 1;
+	while (no < 100) {
+		cout << "这是编号： "<< no++ << endl;
+	}*/
+	//bool once = true;
+	//while (true) {
+	//	if (once == false) {
+	//		cout << "是否继续下一名选手选秀（1-继续， 0- 结束）：";
+	//			bool exist; cin >> exist;
+	//			if (exist == false) {
+	//				cout << "结束！！\n"; break;
+	//			}
+	//			//else cout << "继续！！\n"; continue;
+	//	}
+	//	once = false;
+
+	//	cout << "请输入颜值：（1-漂亮， 0-丑陋）"; bool yz; cin >> yz;
+	//	if (yz == true) { cout << "请输入身材（1-火辣， 0-不辣）："; bool sc; cin >> sc; 
+	//	if (sc == true) cout << "晋级成功！！\n"; //continue;
+	//	else cout << "晋级失败！！\n"; continue;
+	//	}else cout << "晋级失败！！\n"; continue;
+	//	
+	//}
+
+/*for (int ii = 1; ii <= 4; ii++)
+	{
+		std::cout << " 第" << ii << "个小组:\n";
+
+		for (int jj = 1; jj <= 3; jj++)
+		{
+			std::cout << "这是第" << ii << "个小组的第" << jj << "名选手。\n";
+		}
+	}*/
+
+	//99乘法表
+	for (int ii = 1; ii <= 9; ii++)
+	{
+		for (int jj = 1; jj <= ii; jj++)
+			std::cout << ii << "*" << jj << "=" << ii * jj << " ";
+		std::cout << "\n";
+	}
+
+	int no = 1;
+	do{
+		std::cout << "这是第" << no++ << "名选手的编号。\n";
+	} while (no <= 10);
+
+		std::cout << "输出第1列\n";
+	std::cout << "输出第2列\n";
+goto bbb;
+	std::cout << "输出第3列\n";
+	std::cout << "输出第4列\n";
+bbb:
+	std::cout << "待定！" << std::endl;
